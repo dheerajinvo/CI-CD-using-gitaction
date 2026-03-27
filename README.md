@@ -21,8 +21,8 @@ This project demonstrates the implementation of a **CI/CD (Continuous Integratio
 * GitHub
 * GitHub Actions
 * Git
-* Node.js / Java / Python (based on project)
-* Cloud Platforms (AWS / Azure / GCP)
+* Node.js 
+* Cloud Platforms (AWS)
 * YAML (for workflow configuration)
 
 ---
