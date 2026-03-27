@@ -1,5 +1,6 @@
 name: CI/CD Pipeline
 
+# Trigger workflow on push to main branch
 on:
   push:
     branches: ["main"]
@@ -9,16 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout your code
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      # 2️⃣ Setup Node.js environment
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
+      # 3️⃣ Install dependencies
       - name: Install Dependencies
         run: npm install
 
+      # 4️⃣ Run the app
       - name: Run App
         run: node app.js
+
+      # 5️⃣ (Optional) Run tests if you add Jest
+      # - name: Run Tests
+      #   run: npm test
